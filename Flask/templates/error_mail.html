@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Курсы валют</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <form action="{{ url_for('handle_form') }}" method="post">
+    <input checked="" id="signin" name="action" type="radio" value="signin">
+    <label for="signin">Войти</label>
+    <input id="signup" name="action" type="radio" value="signup">
+    <label for="signup">Зарегистрироваться</label>
+    <div id="wrapper">
+      <div id="arrow"></div>
+      <input id="email" name="email" placeholder="Почта" type="text">
+      <input id="pass" name="password" placeholder="Пароль" type="password">
+      <input id="repass" name="repeat_password" placeholder="Повторите пароль" type="password">
+      <input id="name" name="name" placeholder="Имя" type="text">
+    </div>
+    <button type="submit">
+      <span>
+        Reset password
+        <br>
+        Войти
+        <br>
+        Зарегистрироваться
+      </span>
+    </button>
+  </form>
+  <div id="hint">Почта ненадлежащего формата</div>
+</body>
+</html>
